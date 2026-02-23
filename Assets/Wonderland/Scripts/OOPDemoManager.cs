@@ -23,6 +23,7 @@ public class OOPDemoManager : MonoBehaviour
     public GameObject encapsulationText;
     public GameObject inheritanceText;
     public GameObject polymorphismText;
+    public GameObject helpText;
 
     private void HideAll()
     {
@@ -34,6 +35,7 @@ public class OOPDemoManager : MonoBehaviour
         encapsulationText.SetActive(false);
         inheritanceText.SetActive(false);
         polymorphismText.SetActive(false);
+        helpText.SetActive(false);
     }
 
     public void ShowAbstraction()
