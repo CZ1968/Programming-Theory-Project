@@ -10,32 +10,63 @@
 */
 
 using UnityEngine;
+using TMPro;
 
 public class OOPDemoManager : MonoBehaviour
 {
+    public GameObject abstractionObj;
+    public GameObject encapsulationObj;
+    public GameObject inheritanceObj;
+    public GameObject polymorphismObj;
+
+    public GameObject abstractionText;
+    public GameObject encapsulationText;
+    public GameObject inheritanceText;
+    public GameObject polymorphismText;
+
+    private void HideAll()
+    {
+        abstractionObj.SetActive(false);
+        encapsulationObj.SetActive(false);
+        inheritanceObj.SetActive(false);
+        polymorphismObj.SetActive(false);
+        abstractionText.SetActive(false);
+        encapsulationText.SetActive(false);
+        inheritanceText.SetActive(false);
+        polymorphismText.SetActive(false);
+    }
+
     public void ShowAbstraction()
     {
-        Debug.Log("ABSTRACTION: Mostro solo ciò che serve, nascondo i dettagli interni.");
+        HideAll();
+        abstractionObj.SetActive(true);
+        abstractionText.SetActive(true);
     }
 
     public void ShowEncapsulation()
     {
-        Debug.Log("ENCAPSULATION: Proteggo i dati e li gestisco tramite metodi controllati.");
+        HideAll();
+        encapsulationObj.SetActive(true);
+        encapsulationText.SetActive(true);
     }
 
     public void ShowInheritance()
     {
-        Debug.Log("INHERITANCE: Una classe figlia eredita proprietà e metodi dalla classe padre.");
+        HideAll();
+        inheritanceObj.SetActive(true);
+        inheritanceText.SetActive(true);
     }
 
     public void ShowPolymorphism()
     {
-        Debug.Log("POLYMORPHISM: Lo stesso metodo può comportarsi in modi diversi a seconda dell’oggetto.");
+        HideAll();
+        polymorphismObj.SetActive(true);
+        polymorphismText.SetActive(true);
     }
 
-    public void QuitGame()
+    public void ExitApp()
     {
-        Debug.Log("Quit Game premuto");
         Application.Quit();
+        Debug.Log("Exit pressed");
     }
 }
